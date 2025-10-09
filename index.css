@@ -1,8 +1,8 @@
 #game
 {
-	background:#fff;
+	background:#fef5f9;
 	font-size:12px;
-	color:rgba(0,0,0,0.9);
+	color:rgba(30, 29, 29, 0.9);
 	text-shadow:none;
 }
 
@@ -15,13 +15,14 @@
 }
 .thing,.box-header,.box-footer,.box-bit
 {
-	background:#222B45;
-	border:1px solid rgba(0,0,0,0.9);
-	margin:1px;
+	background:#fffefe;
+	border:2px solid rgb(255, 84, 152);
+	margin:2px;
 }
 .thing:hover
 {
-	background:#454A58;
+	background:rgb(255, 84, 152);
+	color: white;
 }
 
 .box-header
@@ -35,7 +36,7 @@
 
 .title
 {
-	text-decoration:underline;
+	text-decoration:solid;
 }
 
 #box-main
@@ -110,7 +111,7 @@
 }
 .upgrade.owned,.achiev.owned
 {
-	box-shadow:0px 0px 0px 2px rgba(0,0,0,0.5) inset;
+	box-shadow:0px 0px 0px 2px rgba(255, 186, 186, 0.5) inset;
 }
 .thing.cantAfford
 {
@@ -121,7 +122,7 @@
 	border:none;
 }
 
-.thing-costs{font-weight:bold;text-shadow:1px 1px 0px rgba(0,0,0,0.5);}
+.thing-costs{font-weight:bold;text-shadow:1px 1px 0px rgba(121, 121, 121, 0.508);}
 .cost.hasEnough{color:#84D83A;}
 .cost.notEnough{color:#FF5462;}
 
@@ -152,9 +153,9 @@
 }
 .fullWidth,.fullWidth:hover
 {
-	background:rgba(0,0,0,0.75);
+	background:rgb(255, 84, 152);
 	box-shadow:none;
-	color:#fff;
+	color:#fff6f6;
 }
 .fullWidth:before,.fullWidth:after
 {
