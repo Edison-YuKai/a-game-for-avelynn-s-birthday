@@ -23,7 +23,7 @@ Buttons
 		on click:anim icon wobble
 		on click:yield 1 heart
 		on click:if (have goldenTouch and chance(1%)) yield 1 goldenHeart
-		icon:stuff/bunny.png
+		icon:https://file.garden/aOcCiwH5a01gtoaD/head%20only
 		no text
 		class:bigButton hasFlares
 		icon class:shadowed
@@ -72,57 +72,57 @@ Buildings
 	*TEMPLATE
 		on click:anim glow
 		
-	*cage|cages
-		name:Rabbit cage|Rabbit cages
-		desc:A tiny little cage.<//><b>Effect:</b><.>Produces 1 rabbit every 10 seconds.
+	*cupid|cupids
+		name:Cupid|Cupids
+		desc:A tiny little cupid.<//><b>Effect:</b><.>Produces 1 heart every 10 seconds.
 		icon:icons[3,0]
 		cost:15 hearts
 		on tick:yield 0.1 heart
 		unlocked
 	
-	*hutch|hutches
-		name:Rabbit hutch|Rabbit hutches
-		desc:A bit roomier than a cage, with enough space to hop around.<//><b>Effect:</b><.>Produces 1 rabbit every 2 seconds.
+	*florist|florists
+		name:Florist|Florists
+		desc:Makes flowers that melts your heart<//><b>Effect:</b><.>Produces 1 heart every 2 seconds.
 		icon:icons[3,1]
 		cost:100 hearts
 		on tick:yield 0.5 hearts
 		req:100 hearts:earned
 	
-	*coop|coops
-		name:Rabbit coop|Rabbit coops
-		desc:A much nicer rabbit home where full heart families can live.<//><b>Effect:</b><.>Produces 5 rabbits per second.
+	*Cosmoplace
+		name:Cosmoplace
+		desc:A private space with snacks and a sofa to make love and watch tv.<//><b>Effect:</b><.>Produces 5 hearts per second.
 		icon:icons[3,2]
 		cost:600 hearts
 		on tick:yield 5 hearts
 		req:600 hearts:earned
 	
 	*pen|pens
-		name:Rabbit pen|Rabbit pens
-		desc:A lovely enclosure with plenty of green space.<//><b>Effect:</b><.>Produces 12 rabbits per second.
+		name:pen|pens
+		desc:A lovely enclosure with plenty of green space.<//><b>Effect:</b><.>Produces 12 hearts per second.
 		icon:icons[3,3]
 		cost:4000 hearts
 		on tick:yield 12 hearts
 		req:4000 hearts:earned
 	
 	*meadow|meadows
-		name:Rabbit meadow|Rabbit meadows
-		desc:A wide open space full of shade and lush grass.<//><b>Effect:</b><.>Produces 90 rabbits per second.
+		name:meadow|meadows
+		desc:A wide open space full of shade and lush grass.<//><b>Effect:</b><.>Produces 90 hearts per second.
 		icon:icons[3,4]
 		cost:20000 hearts
 		on tick:yield 90 hearts
 		req:20000 hearts:earned
 	
 	*village|villages
-		name:Rabbit village|Rabbit villages
-		desc:Your hearts are building their own villages now!<//><b>Effect:</b><.>Produces 300 rabbits per second.
+		name:village|villages
+		desc:Your hearts are building their own villages now!<//><b>Effect:</b><.>Produces 300 hearts per second.
 		icon:icons[3,5]
 		cost:200000 hearts, 1 goldenHeart
 		on tick:yield 300 hearts
 		req:200000 hearts:earned and independenceDay
 		
 	*city|cities
-		name:Rabbit city|Rabbit cities
-		desc:A bustling little city, populated with busy rabbits.<//><b>Effect:</b><.>Produces 1000 rabbits per second.
+		name:city|cities
+		desc:A bustling little city, populated with busy hearts.<//><b>Effect:</b><.>Produces 1000 hearts per second.
 		icon:icons[3,6]
 		cost:3000000 hearts, 4 goldenHearts
 		on tick:yield 1000 hearts
@@ -130,7 +130,7 @@ Buildings
 		
 	*citadel|citadels
 		name:Moon citadel|Moon citadels
-		desc:An ornate palace standing on the moon, ruled by heart kings and queens and staffed with royal heart guards.<//><b>Effect:</b><.>Produces 4000 rabbits per second.
+		desc:An ornate palace standing on the moon, ruled by heart kings and queens and staffed with royal heart guards.<//><b>Effect:</b><.>Produces 4000 hearts per second.
 		icon:icons[3,7]
 		cost:70000000 hearts, 16 goldenHearts
 		on tick:yield 4000 hearts
@@ -151,127 +151,115 @@ Upgrades
 	*TEMPLATE
 		on click:anim glow
 	
-	//food upgrades
-	//inspiration : http://rabbit.org/suggested-vegetables-and-fruits-for-a-rabbit-diet/
-	
-	*parsley
-		name:Parsley
-		desc:A nice little supplement to your hearts' diet.<//><b>Effect:</b><.>+1 heart/click
+	*discord
+		name:Discord
+		desc:The beginning of something new.<//><b>Effect:</b><.>+1 heart/click
 		icon:icons[1,1]
 		cost:100 hearts
 		passive:increase heart yield of loveBtn by 1
 		req:10 hearts:earned
 		
-	*spinach
-		name:Spinach
-		desc:Big tasty leaves, perfect for hungry hearts.<//><b>Effect:</b><.>+1 heart/click
+	*instagram
+		name:Instagram
+		desc:Love at first stalk?<//><b>Effect:</b><.>+1 heart/click
 		icon:icons[1,2]
 		cost:200 hearts
 		passive:increase heart yield of loveBtn by 1
 		req:50 hearts:earned
 		
-	*lettuce
-		name:Lettuce
-		desc:Frilly greens loved by all hearts.<//><b>Effect:</b><.>+1 heart/click
+	*socialnight
+		name:Social Night
+		desc:The spark that accelerated our journey~<//><b>Effect:</b><.>+1 heart/click
 		icon:icons[1,3]
 		cost:400 hearts
 		passive:increase heart yield of loveBtn by 1
 		req:200 hearts:earned
 		
-	*broccoli
-		name:Broccoli
-		desc:Crunchy greens that look like little trees.<//><b>Effect:</b><.>hearts/click x2<.>heart production +5%
+	*confession
+		name:Confession
+		desc:There's no going back now, so proud of you<//><b>Effect:</b><.>hearts/click x2<.>heart production +5%
 		icon:icons[1,4]
 		cost:3000 hearts
 		passive:multiply heart yield of loveBtn by 2
 		passive:multiply yield of hearts by 1.05
 		req:1000 hearts:earned
 		
-	*apple
-		name:Apple
-		desc:Nice pieces of juicy red apples.<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
+	*blackspecs
+		name:Thick Black Spectacles
+		desc:Avelynn share price rises 300% with new thick black spectacles purchase.<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
 		icon:icons[1,5]
 		cost:10000 hearts
 		passive:multiply heart yield of loveBtn by 1.5
 		passive:multiply yield of hearts by 1.05
 		req:1000 hearts:earned
 		
-	*radish
-		name:Radish
-		desc:Purple, crunchy, and strangely spicy.<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
+	*fightrepair
+		name:Fight Repair Skills
+		desc:Now we are unstoppable!<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
 		icon:icons[1,6]
 		cost:50000 hearts
 		passive:multiply heart yield of loveBtn by 1.5
 		passive:multiply yield of hearts by 1.05
 		req:10000 hearts:earned
 		
-	*mint
-		name:Mint
-		desc:Tasty, and gives your hearts a lovely breath.<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
+	*familyintroduction
+		name:Family Introduction
+		desc:A big step with big rewards.<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
 		icon:icons[1,7]
 		cost:100000 hearts
 		passive:multiply heart yield of loveBtn by 1.5
 		passive:multiply yield of hearts by 1.05
 		req:50000 hearts:earned
 		
-	*chard
-		name:Chard
-		desc:Broad leaves that make for a tasty salad.<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
+	*gymdates
+		name:Gym Dates
+		desc:As if you needed to get any prettier.<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
 		icon:icons[1,8]
 		cost:500000 hearts
 		passive:multiply heart yield of loveBtn by 1.5
 		passive:multiply yield of hearts by 1.05
 		req:100000 hearts:earned
 		
-	*cherry
-		name:Cherry
-		desc:Your hearts look like little vampires when they start munching on these!<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
+	*specialbirthday
+		name:Special Birthday
+		desc:A special birthday for my special lady. Happy birthday Avelynn c:<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
 		icon:icons[1,9]
 		cost:1000000 hearts
 		passive:multiply heart yield of loveBtn by 1.5
 		passive:multiply yield of hearts by 1.05
 		req:500000 hearts:earned
-		
-	*heart
-		name:Heart
-		desc:The quintessential rabbit food! Crunchy, orange, and perfect.<//><b>Effect:</b><.>hearts/click x2<.>heart production +10%
-		icon:icons[1,0]
-		cost:100000000 hearts
-		passive:multiply heart yield of loveBtn by 2
-		passive:multiply yield of hearts by 1.1
-		req:1000000 hearts:earned
 	
 	//building upgrades
 	
 	*buildingUpgrade1
 		name:Sippy bottles
-		desc:Your hearts can drink their fill!<//><b>Effect:</b><.>rabbit cage production x2<.>rabbit hutch production x2<.>rabbit coop production x2
+		desc:Your hearts can drink their fill!<//><b>Effect:</b><.>rabbit cupid production x2<.>rabbit florist production x2<.>rabbit Cosmoplace production x2
 		icon:icons[2,0] icons[3,0]
 		cost:1000 hearts
-		passive:multiply yield of cage by 2
-		passive:multiply yield of hutch by 2
-		passive:multiply yield of coop by 2
-		req:(cages>=10 or hutches>=10 or coops>=10)
+		passive:multiply yield of cupid by 2
+		passive:multiply yield of florist by 2
+		passive:multiply yield of Cosmoplace by 2
+		req:(cupids>=10 or florists>=10 or Cosmoplace>=10)
 		
 	*buildingUpgrade2
 		name:Prime grade hay
-		desc:Not just for horses anymore!<//><b>Effect:</b><.>rabbit cage production x2<.>rabbit hutch production x2<.>rabbit coop production x2
+		desc:Not just for horses anymore!<//><b>Effect:</b><.>rabbit cupid production x2<.>rabbit florist production x2<.>rabbit Cosmoplace production x2
 		icon:icons[2,0] icons[3,1]
 		cost:100000 hearts
-		passive:multiply yield of cage by 2
-		passive:multiply yield of hutch by 2
-		passive:multiply yield of coop by 2
-		req:(cages>=50 or hutches>=50 or coops>=50)
+		passive:multiply yield of cupid by 2
+		passive:multiply yield of florist by 2
+		passive:multiply yield of Cosmoplace by 2
+		req:(cupids>=50 or florists>=50 or Cosmoplace>=50)
 		
 	*buildingUpgrade3
 		name:Shredded newspapers
-		desc:You'd think they just poop on these, but they really enjoy reading the Sunday comics.<//><b>Effect:</b><.>rabbit cage production x2<.>rabbit hutch production x2<.>rabbit coop production x2
+		desc:You'd think they just poop on these, but they really enjoy reading the Sunday comics.<//><b>Effect:</b><.>rabbit cupid production x2<.>rabbit florist production x2<.>rabbit Cosmoplace production x2
 		icon:icons[2,0] icons[3,2]
 		cost:5000000 hearts
-		passive:multiply yield of cage by 2
-		passive:multiply yield of hutch by 2
-		passive:multiply yield of coop by 2
-		req:(cages>=100 or hutches>=100 or coops>=100)
+		passive:multiply yield of cupid by 2
+		passive:multiply yield of florist by 2
+		passive:multiply yield of Cosmoplace by 2
+		req:(cupids>=100 or florists>=100 or Cosmoplace>=100)
 		
 	*buildingUpgrade4
 		name:Pretty fences
@@ -336,7 +324,7 @@ Upgrades
 	
 	*independenceDay
 		name:Independence day
-		desc:Your hearts are making their first step towards declaring their independence from the oppressive shackles of pens and cages.<//><b>Effect:</b><.>unlocks new buildings
+		desc:Your hearts are making their first step towards declaring their independence from the oppressive shackles of pens and cupids.<//><b>Effect:</b><.>unlocks new buildings
 		icon:icons[2,7]
 		cost:10 goldenHearts
 		req:5 goldenHearts:earned
@@ -407,17 +395,17 @@ Achievements
 		req:100000 hearts per second
 		icon:icons[2,3] icons[0,4] icons[0,6]
 		
-	*heartAchiev1
+	*goldenheartAchiev1
 		name:Isn't it neat
 		desc:Have <b>1</b> golden heart.
 		req:1 goldenHeart
 		icon:icons[0,1] icons[0,2]
-	*heartAchiev2
+	*goldenheartAchiev2
 		name:All that glitters
 		desc:Have <b>100</b> golden hearts.
 		req:100 goldenHeart
 		icon:icons[0,1] icons[0,3]
-	*heartAchiev3
+	*goldenheartAchiev3
 		name:Zero nutritional value
 		desc:Have <b>1000</b> golden hearts.
 		req:1000 goldenHeart
