@@ -9,15 +9,10 @@
 	text-shadow:none;
 }
 
-.customIcon{
-	height: 32px;
-	width: 32px;
-}
-
 
 .box
 {
-	text-align:center;
+	text-align:left;
 	padding:0px;
 	box-shadow:none;
 }
@@ -33,10 +28,21 @@
 	color: white;
 }
 
+#box-things-Resources {
+	text-align: center;
+}
+
 .box-header
 {
 	margin-bottom:4px;
+	text-align: center;
 }
+
+.box-bit
+{
+	text-align: center;
+}
+
 .box-footer
 {
 	margin-top:4px;
@@ -56,6 +62,7 @@
 	width:60%;
 	position:absolute;
 }
+
 #box-res.fullWidth
 {
 	width:100%;
@@ -65,6 +72,7 @@
 	z-index:100;
 	position:absolute;
 }
+
 #box-buttons
 {
 	top:0px;
@@ -73,6 +81,7 @@
 	left:0px;
 	position:absolute;
 }
+
 #box-store
 {
 	right:0px;
@@ -144,6 +153,7 @@
 {
 	display:block;
 	margin-right:0px;
+	padding: 4px;
 	font-size:14px;
 }
 

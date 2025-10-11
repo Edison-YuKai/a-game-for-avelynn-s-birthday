@@ -9,8 +9,8 @@ Let's make a game!
 Settings
 	building cost increase:105%
 	building cost refund:70%
-	spritesheet:icons, 32 by 32, https://file.garden/aOcCiwH5a01gtoaD/assets/spritesheet.png
-	stylesheet:https://file.garden/aOcCiwH5a01gtoaD/index2.txt
+	spritesheet:icons, 48 by 48, https://file.garden/aOcCiwH5a01gtoaD/spritesheet.png
+	stylesheet:https://file.garden/aOcCiwH5a01gtoaD/index7.txt
 
 Layout
 	use default
@@ -77,7 +77,7 @@ Buildings
 	*cursor|cursors
 		name:Cursor|Cursors
 		desc:A tiny little cursor.<//><b>Effect:</b><.>Produces 1 heart every second.
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/cursor.png
+		icon:icons[6,0]
 		cost:20 hearts
 		on tick:yield 1 heart
 		unlocked
@@ -85,7 +85,7 @@ Buildings
 	*msgbot|msgbots
 		name:Flirty messaging bots|Flirty messaging bot
 		desc:Makes flowers that melts your heart<//><b>Effect:</b><.>Produces 10 hearts every second.
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/florist.png
+		icon:icons[0,1]
 		cost:1000 hearts
 		on tick:yield 10 hearts
 		req:1500 hearts:earned
@@ -93,7 +93,7 @@ Buildings
 	*IGreels
 		name:Automated IG Reels
 		desc:A private space with snacks and a sofa to make love and watch tv.<//><b>Effect:</b><.>Produces 100 hearts per second.
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/cosmoplace.png
+		icon:icons[1,1]
 		cost:10000 hearts
 		on tick:yield 100 hearts
 		req:12000 hearts:earned
@@ -101,7 +101,7 @@ Buildings
 	*florist|florists
 		name:Florist|Florists
 		desc:A lovely enclosure with plenty of green space to grow hearts at scale.<//><b>Effect:</b><.>Produces 15000 hearts per second.
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/plantation.png
+		icon:icons[2,1]
 		cost:1000000 hearts
 		on tick:yield 15000 hearts
 		req:1010000 hearts:earned
@@ -109,24 +109,36 @@ Buildings
 	*cosmoplace
 		name:Cosmoplace
 		desc:A wide open space full of shade and lush grass.<//><b>Effect:</b><.>Produces 35000 hearts per second.
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/shein%20heart%20factory.png
+		icon:icons[3,1]
 		cost:3000000 hearts
-		on tick:yield 35000 hearts
+		on tick:
+			yield 35000 hearts
+			if (chance(1%))
+				toast There was a golden heart under a sofa pillow!
+				yield 1 goldenHearts
+			end
+		end
 		req:1200000 hearts:earned
 
 	*shein
 		name:SHEIN Factory|SHEIN Factories
 		desc:A wide open space full of shade and lush grass.<//><b>Effect:</b><.>Produces 60000 hearts per second.
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/shein%20heart%20factory.png
+		icon:icons[4,1]
 		cost:6000000 hearts
-		on tick:yield 60000 hearts
+		on tick:
+			yield 60000 hearts
+			if (chance(5%))
+				toast Xiao Ming found a golden heart!
+				yield 1 goldenHearts
+			end
+		end
 		req:2000000 hearts:earned
 
 	*avelynnstemple
 		name:Avelynn's Temple
 		text:Avelynn's Temple ([this]%)
 		desc:A huge heart temple. A monument to all the hearts clicked and grown in your honor, which will take time and effort to complete.<//><b>Your temple is [this]% complete.</b>
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/temple.png
+		icon:icons[5,1]
 		cost:200000 hearts, 10 goldenHearts
 		req:200000 hearts:earned and goldenUpgrade3
 		limit:100
@@ -139,7 +151,7 @@ Upgrades
 	*eyecontact
 		name:Eye Contact
 		desc:I still remember how I felt when I first saw you, I talked about WaterWay Point quickly so that I can be the confident one.<//><b>Effect:</b><.>+1 heart/click
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/discord.png
+		icon:icons[6,1]
 		cost:100 hearts
 		passive:increase heart yield of loveBtn by 1
 		req:100 hearts:earned
@@ -147,23 +159,23 @@ Upgrades
 	*handholding
 		name:Handholding
 		desc:How brave of you to make that first move :O<//><b>Effect:</b><.>+1 heart/click
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/instagram.png
+		icon:icons[1,0]
 		cost:200 hearts
 		passive:increase heart yield of loveBtn by 1
 		req:200 hearts:earned
 		
 	*warmhugs
 		name:Warm Hugs
-		desc:Battery <//><b>Effect:</b><.>+1 heart/click
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/social%20night.png
+		desc:The answer to all our problems<//><b>Effect:</b><.>+1 heart/click
+		icon:icons[0,2]
 		cost:400 hearts
 		passive:increase heart yield of loveBtn by 1
 		req:400 hearts:earned
 		
 	*softkisses
 		name:Soft Kisses
-		desc:That brave moment your heart decided to stop hiding<//><b>Effect:</b><.>hearts/click x2<.>heart production +5%
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/confession.png
+		desc:Might quite be the best thing in the world.<//><b>Effect:</b><.>hearts/click x2<.>heart production +5%
+		icon:icons[2,0]
 		cost:3000 hearts
 		passive:multiply heart yield of loveBtn by 2
 		passive:multiply yield of hearts by 1.05
@@ -171,8 +183,8 @@ Upgrades
 		
 	*underwear
 		name:Kinky Underwear
-		desc:Avelynn share price rises 300% with new thick black spectacles purchase.<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/blackspecs.png
+		desc:Shopee singlehandedly spicing up your wardrobe.<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
+		icon:icons[1,2]
 		cost:10000 hearts
 		passive:multiply heart yield of loveBtn by 1.5
 		passive:multiply yield of hearts by 1.05
@@ -180,8 +192,8 @@ Upgrades
 		
 	*necklace
 		name:Silver Necklace
-		desc:Arguments fixed with hugs and apologies — now your bond recovers faster. Now we are unstoppable!<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/fightrepair.png
+		desc:I don't know what you like about it but I'm just happy it works.<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
+		icon:icons[3,0]
 		cost:50000 hearts
 		passive:multiply heart yield of loveBtn by 1.5
 		passive:multiply yield of hearts by 1.05
@@ -189,8 +201,8 @@ Upgrades
 		
 	*rings
 		name:Silver Rings
-		desc:A big step with big rewards.<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/family%20intro.png
+		desc:If a necklace wasn't enough, now there's rings to boot.<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
+		icon:icons[2,2]
 		cost:100000 hearts
 		passive:multiply heart yield of loveBtn by 1.5
 		passive:multiply yield of hearts by 1.05
@@ -198,8 +210,8 @@ Upgrades
 		
 	*shoulders
 		name:Big Shoulders
-		desc:Sweating together = growing together. As if you needed to get any prettier.<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/gym%20dates.png
+		desc:Making you do that tongue out salivating frog face.<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
+		icon:icons[3,2]
 		cost:500000 hearts
 		passive:multiply heart yield of loveBtn by 1.5
 		passive:multiply yield of hearts by 1.05
@@ -207,8 +219,8 @@ Upgrades
 		
 	*flowerdome
 		name:Flower Dome
-		desc:A special birthday for my special lady. Happy birthday Avelynn c:<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/birthday.png
+		desc:When buying flowers for you just aren't enough.<//><b>Effect:</b><.>hearts/click x1.5<.>heart production +5%
+		icon:icons[4,2]
 		cost:1000000 hearts
 		passive:multiply heart yield of loveBtn by 1.5
 		passive:multiply yield of hearts by 1.05
@@ -219,64 +231,64 @@ Upgrades
 	*buildingUpgrade1
 		name:Gaming Mouse
 		desc:A powerful mouse to handle all that furious clicking<//><b>Effect:</b><.>Cursor production x2
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/telesticker.png
+		icon:icons[6,2]
 		cost:1000 hearts
 		passive:multiply yield of cursor by 2
-		req:(cursors>=50)
+		req:(cursors>=30)
 		
 	*buildingUpgrade2
 		name:Improved LLMs
 		desc:Improved LLMs now pass zeroGPT 100% of the time, your boyfriend will never notice.<//><b>Effect:</b><.>Flirty messaging bots production x2
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/nubcat.png
+		icon:icons[5,2]
 		cost:100000 hearts
 		passive:multiply yield of msgbots by 2
-		req:(msgbots>=50)
+		req:(msgbots>=30)
 		
 	*buildingUpgrade3
 		name:sillynubcat and happymaltesepuppy
 		desc:Automated IG Reels now use LLMs to find accounts with the cutest reels.<//><b>Effect:</b><.>Automated IG Reels production x2
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/glazedms.png
+		icon:icons[0,3]
 		cost:500000 hearts
 		passive:multiply yield of IGreels by 2
-		req:(IGreels>=50)
+		req:(IGreels>=30)
 		
 	*buildingUpgrade4
 		name:Flower Supply Chains
 		desc:We found cheap Malaysian flower suppliers who are willing to smuggle flowers in for us every week, for a price.<//><b>Effect:</b><.>Florists production x2
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/heartfeltconvos.png
+		icon:icons[1,3]
 		cost:1000000 hearts
 		passive:multiply yield of florists by 2
-		req:(florists>=50)
+		req:(florists>=30)
 		
 	*buildingUpgrade5
 		name:theplace
 		desc:Netflix we can't use, snacks we forget to eat, clothes we end up not wearing.<//><b>Effect:</b><.>Cosmoplace production x2
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/dressup.png
+		icon:icons[3,3]
 		cost:1000000 hearts
 		passive:multiply yield of cosmoplace by 2
-		req:(cosmoplace>=50)
+		req:(cosmoplace>=30)
 		
 	*buildingUpgrade6
 		name:Childlabormaxxing
 		desc:Xi Jinping rolls out new initiative to talent hunt for the best children from the ages of 3 and up.<//><b>Effect:</b><.>SHEIN Heart Factories production x2
-		icon:https://file.garden/aOcCiwH5a01gtoaD/assets/dressup.png
-		cost:1000000 hearts
+		icon:icons[2,3]
+		cost:5000000 hearts
 		passive:multiply yield of shein by 2
-		req:(shein>=50)
+		req:(shein>=30)
 		
 	//golden heart upgrades
 	
 	*goldenUpgrade1
 		name:Golden touch
 		desc:Regular hearts are nice and all, but what about golden hearts?<//><b>Effect:</b><.>1% chance of gaining 1 golden heart per heart click
-		icon:icons[2,5]
+		icon:icons[6,3]
 		cost:1 goldenHeart
 		req:1 goldenHeart:earned
 		
 	*goldenUpgrade2
 		name:Leprechauns
 		desc:I heard chasing leprechauns is a good way to find gold.<//><b>Effect:</b><.>lucky hearts appear 30% more often
-		icon:icons[2,6]
+		icon:icons[5,3]
 		passive:multiply frequency of luckyheart by 0.7
 		cost:5 goldenHearts
 		req:1 goldenHeart:earned
@@ -284,14 +296,14 @@ Upgrades
 	*goldenUpgrade3
 		name:Is this an isekai anime?
 		desc:<//><b>Effect:</b><.>unlocks something new.
-		icon:icons[2,7]
-		cost:50 goldenHearts
-		req:50 goldenHearts:earned
+		icon:icons[1,4]
+		cost:30 goldenHearts
+		req:10 goldenHearts:earned
 		
 	*goldenUpgrade4
 		name:Heart Investing
 		desc:Heart Pte Ltd is now publicly listed on the stock market.<//><b>Effect:</b><.>lucky heart effects are 4 times more powerful
-		icon:icons[2,8]
+		icon:icons[0,4]
 		cost:100 goldenHearts
 		req:50 goldenHearts:earned
 		
@@ -303,69 +315,69 @@ Achievements
 		name:Heart Village
 		desc:You’ve gathered your first sparks of love. Have <b>300</b> hearts.
 		req:300 heart
-		icon:icons[2,4] icons[0,2] icons[0,6]
+		icon:icons[3,4]
 	*heartAchiev2
 		name:Heart Industry
 		desc:The flame of our affection burns stronger. Have <b>10000</b> hearts.
 		req:10000 hearts
-		icon:icons[2,4] icons[0,3] icons[0,6]
+		icon:icons[4,4]
 	*heartAchiev3
 		name:Heart Monopoly
 		desc:You’ve proven your heart knows no bounds. Have <b>1000000</b> hearts.
 		req:1000000 hearts
-		icon:icons[2,4] icons[0,4] icons[0,6]
+		icon:icons[5,4]
 		
 	*clickAchiev1
 		name:Boop!
 		desc:You clicked me — was that a poke or affection? Click the heart <b>10</b> times.
 		req:10 loveBtn clicks
-		icon:icons[2,2] icons[0,2] icons[0,6]
+		icon:icons[6,4]
 	*clickAchiev2
 		name:Still booping
 		desc:You can’t stop, can you? Click the heart <b>100</b> times.
 		req:100 loveBtn clicks
-		icon:icons[2,2] icons[0,3] icons[0,6]
+		icon:icons[0,5]
 	*clickAchiev3
 		name:Endless boops
 		desc:You’ve officially turned me into a love button. Click the heart <b>2000</b> times.
 		req:2000 loveBtn clicks
-		icon:icons[2,2] icons[0,4] icons[0,6]
+		icon:icons[2,5]
 		
 	*heartPsAchiev1
 		name:Thumpthump
 		desc:You produce as much as my resting heartrate. Produce <b>71</b> hearts per second.
 		req:10 hearts per second
-		icon:icons[2,3] icons[0,2] icons[0,6]
+		icon:icons[4,5]
 	*heartPsAchiev2
 		name:Heartshower
 		desc:I need an umbrella. Produce <b>1000</b> hearts per second.
 		req:1000 hearts per second
-		icon:icons[2,3] icons[0,3] icons[0,6]
+		icon:icons[2,5]
 	*heartPsAchiev3
 		name:How are you still alive?!
 		desc:Produce <b>100000</b> hearts per second.
 		req:100000 hearts per second
-		icon:icons[2,3] icons[0,4] icons[0,6]
+		icon:icons[5,5]
 		
 	*goldenheartAchiev1
 		name:Isn't it neat
 		desc:Have <b>1</b> golden heart.
 		req:1 goldenHeart
-		icon:icons[0,1] icons[0,2]
+		icon:icons[6,5]
 	*goldenheartAchiev2
 		name:All that glitters
 		desc:Have <b>100</b> golden hearts.
 		req:100 goldenHeart
-		icon:icons[0,1] icons[0,3]
+		icon:icons[0,6]
 	*goldenheartAchiev3
 		name:Heart of Gold
 		desc:Have <b>1000</b> golden hearts.
 		req:1000 goldenHeart
-		icon:icons[0,1] icons[0,4]
+		icon:icons[1,6]
 	
 	*templeAchiev
 		name:Enlightenment!
 		desc:Complete building <b>Avelynn's temple</b>.<//>This is it. You beat the game! I love you my adorable baby.
 		req:100 avelynnstemple
-		icon:icons[3,8] icons[0,4]
+		icon:icons[2,6]
 		
