@@ -10,7 +10,7 @@ Settings
 	building cost increase:105%
 	building cost refund:70%
 	spritesheet:icons, 48 by 48, https://file.garden/aOcCiwH5a01gtoaD/spritesheet.png
-	stylesheet:https://file.garden/aOcCiwH5a01gtoaD/index7.txt
+	stylesheet:https://file.garden/aOcCiwH5a01gtoaD/index3.txt
 
 Layout
 	use default
@@ -69,6 +69,16 @@ Shinies
 				yield $amount goldenHeart
 			end
 		end
+
+	//*endgameshiny
+	//	req:15 msgbots
+	//	movement:anywhere moveRight
+	//	frequency:3
+	//	frequency variation:1
+	//	duration:5
+	//	icon:stuff/luckyBunny.png
+	//	class:bigButton
+	//	no click
 
 Buildings
 	*TEMPLATE
